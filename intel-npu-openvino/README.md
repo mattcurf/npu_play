@@ -6,7 +6,7 @@ This repo demonstrates the setup of all required Intel NPU user-space drivers fo
 
 The NPU device uses a precompiled firmware blob that needs to be updated on the host outside of the docker environment.  The following steps will install the required firmware blob upon the next system reboot:
 ```
-$ wget https://github.com/intel/linux-npu-driver/releases/download/v1.2.0/intel-fw-npu_1.2.0.20240404-8553879914_ubuntu22.04_amd64.deb 
+$ wget https://github.com/intel/linux-npu-driver/releases/download/v1.5.0/intel-fw-npu_1.5.0.20240619-9582784383_ubuntu22.04_amd64.deb
 $ sudo dpkg -i *.deb
 $ sudo reboot
 ```
