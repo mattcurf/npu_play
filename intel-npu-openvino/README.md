@@ -1,6 +1,6 @@
 # openvino_play
 
-This repo demonstrates the setup of all required Intel NPU user-space drivers for use with OpenVINO 2024.1. It has been tested on a Intel Intel(R) Core(TM) Ultra 5 125H processor and Ubuntu 24.04 
+This repo demonstrates the setup of all required Intel NPU user-space drivers for use with OpenVINO 2024.2. It has been tested on a Intel Intel(R) Core(TM) Ultra 5 125H processor and Ubuntu 24.04 
 
 ## Prerequisite
 
