@@ -10,14 +10,14 @@ RUN apt update && \
     python3-pip
 
 RUN mkdir /opt/intel && \
-  wget https://storage.openvinotoolkit.org/repositories/openvino/packages/2024.1/linux/l_openvino_toolkit_ubuntu22_2024.1.0.15008.f4afc983258_x86_64.tgz --output-document openvino_2024.1.0.tgz && \
-  tar xf openvino_2024.1.0.tgz && \
-  rm openvino_2024.1.0.tgz && \
-  mv l_openvino_toolkit_ubuntu22_2024.1.0.15008.f4afc983258_x86_64 /opt/intel/openvino_2024.1.0 && \
-  cd /opt/intel/openvino_2024.1.0  && \
+  wget https://storage.openvinotoolkit.org/repositories/openvino/packages/2024.2/linux/l_openvino_toolkit_ubuntu22_2024.2.0.15519.5c0f38f83f6_x86_64.tgz --output-document openvino_2024.2.0.tgz && \
+  tar xf openvino_2024.2.0.tgz && \
+  rm openvino_2024.2.0.tgz && \
+  mv l_openvino_toolkit_ubuntu22_2024.2.0.15519.5c0f38f83f6_x86_64 /opt/intel/openvino_2024.2.0 && \
+  cd /opt/intel/openvino_2024.2.0  && \
   ./install_dependencies/install_openvino_dependencies.sh -y && \
   python3 -m pip install -r ./python/requirements.txt && \
   python3 -m pip install torch torchvision
 
-RUN /bin/bash -c "source /opt/intel/openvino_2024.1.0/setupvars.sh && \
-  /opt/intel/openvino_2024.1.0/samples/cpp/build_samples.sh"
+RUN /bin/bash -c "source /opt/intel/openvino_2024.2.0/setupvars.sh && \
+  /opt/intel/openvino_2024.2.0/samples/cpp/build_samples.sh"
