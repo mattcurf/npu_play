@@ -21,3 +21,9 @@ RUN mkdir /opt/intel && \
 
 RUN /bin/bash -c "source /opt/intel/openvino_2024.2.0/setupvars.sh && \
   /opt/intel/openvino_2024.2.0/samples/cpp/build_samples.sh"
+
+# Features needed for select benchmarks 
+RUN apt install --no-install-recommends -q -y \
+    libgl1-mesa-glx \
+    git && \
+    python3 -m pip install requests opencv-python seaborn onnx Pillow pandas scikit-learn torch PyYAML>=5.3.1 tqdm matplotlib>=3.4
